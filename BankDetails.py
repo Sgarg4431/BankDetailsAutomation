@@ -22,6 +22,7 @@ def processedFile(uploaded_file1):
 
         con = mysql.connector.connect(host ='easy-prod-db-replica-new.cpmomzsxd8rm.ap-south-1.rds.amazonaws.com',user = 'YashSharma',passwd = 'Vrv6XukaKb8ECUK',port=3306)
         mycursor=con.cursor()
+        print("Checking the Overall Quantity...")
         refund_details1 = pd.read_sql('''select  distinct a.bank_account_number,a.customer_id,  a.bank_account_holder, 
         a.bank_code, b.ifsc_code 
         from payment_service.autopay_subscriptions a join loan_service.bank_details b

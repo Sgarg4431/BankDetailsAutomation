@@ -19,12 +19,8 @@ def processedFile(uploaded_file1):
         bank_detail_df = bank_detail_df.rename(columns = {'Customer ID':'customer_id'})
 
 
-        user = 'YashSharma'
-        passwd = 'Vrv6XukaKb8ECUK'
-        host = 'easy-prod-db-replica-new.cpmomzsxd8rm.ap-south-1.rds.amazonaws.com'
-        port = 3306
 
-        con = pymysql.connect(user = user,passwd = passwd,port=port,host =host)
+        con = pymysql.connect(user = "YashSharma",passwd = 'Vrv6XukaKb8ECUK',port=3306,host ="easy-prod-db-replica-new.cpmomzsxd8rm.ap-south-1.rds.amazonaws.com")
         con.connect()
         refund_details1 = pd.read_sql('''select  distinct a.bank_account_number,a.customer_id,  a.bank_account_holder, 
         a.bank_code, b.ifsc_code 

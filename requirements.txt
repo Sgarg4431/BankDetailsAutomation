@@ -3,4 +3,4 @@ pandas
 numpy
 pymysql
 openpyxl
-mysql
+mysql-connector

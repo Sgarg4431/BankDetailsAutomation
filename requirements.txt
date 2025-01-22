@@ -3,3 +3,8 @@ pandas
 numpy
 pymysql
 openpyxl
+
+user = 'YashSharma'
+passwd = 'Vrv6XukaKb8ECUK'
+host = 'easy-prod-db-replica-new.cpmomzsxd8rm.ap-south-1.rds.amazonaws.com'
+port = 3306
